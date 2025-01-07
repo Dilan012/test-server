@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Request</title>
+    <script>
+        function sendRequest() {
+            const url = "http://localhost:3000"; // Replace with your URL
+
+            // Example of a GET request
+            fetch(url, {
+                method: "GET", // Change to "POST" for a POST request
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Success:", data);
+                alert("Request successful!");
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Request failed!");
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Send Request</h1>
+    <button onclick="sendRequest()">Click Me to Send Request</button>
+</body>
+</html>
