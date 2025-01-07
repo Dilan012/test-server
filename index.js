@@ -17,13 +17,14 @@ app.use(cors({
 app.use(cookieParser());
 
 app.get("/", (req, res, next) => {
+    
     res.cookie("test", "Hello from node", {
         secure:true, 
         httpOnly:true,
         domain: devEnviroment ? undefined : cleanedDomain,
         
     })
-    res.send("hello from node")
+    res.json({messge:"hello from node"})
 })
 
 
