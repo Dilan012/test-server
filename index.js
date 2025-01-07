@@ -5,7 +5,7 @@ const cleanedDomain = CLIENT.replace(/^https?:\/\//, ''); // Removes http:// or 
 
 const express = require("express")
 const app = express();
-const port = 3000
+const port = 3001
 const cookieParser = require("cookie-parser");
 
 app.use(cookieParser());
