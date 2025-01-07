@@ -22,6 +22,7 @@ app.get("/", (req, res, next) => {
         secure:true, 
         httpOnly:true,
         domain: devEnviroment ? undefined : cleanedDomain,
+        sameSite:"none"
         
     })
     res.json({messge:"hello from node"})
