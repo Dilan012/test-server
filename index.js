@@ -22,6 +22,6 @@ app.get("/", (req, res, next) => {
 
 
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log(`server is listning to port ${port}`)
 })
