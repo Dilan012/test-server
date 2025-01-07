@@ -17,6 +17,8 @@ app.use(cors({
 app.use(cookieParser());
 
 app.get("/", (req, res, next) => {
+
+    console.log(req.cookies)
     
     res.cookie("test", "Hello from node", {
         secure:true, 
@@ -25,7 +27,7 @@ app.get("/", (req, res, next) => {
         sameSite:"none"
         
     })
-    res.json({messge:"hello from node"})
+    res.json({messge:"hello from node", cookies: req.cookies})
 })
 
 
