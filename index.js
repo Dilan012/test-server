@@ -23,7 +23,7 @@ app.get("/", (req, res, next) => {
     res.cookie("test", "Hello from node", {
         secure:true, 
         httpOnly:true,
-        //domain: devEnviroment ? undefined : cleanedDomain,
+        domain: devEnviroment ? undefined : cleanedDomain,
         sameSite:"none"
         
     })
