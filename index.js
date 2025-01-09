@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser");
 
 app.use(cors({
         origin: 'https://test.ganket.work.gd',
-        credentials:true
+        //credentials:true
     }));
 
 app.use(cookieParser());
@@ -25,7 +25,7 @@ app.get("/", (req, res, next) => {
         httpOnly:true,
         domain: cleanedDomain,
         sameSite:"none",
-        path:"auth"
+        path:"auth/test"
         
     })
     
