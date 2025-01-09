@@ -25,7 +25,7 @@ app.get("/", (req, res, next) => {
         httpOnly:true,
         domain: cleanedDomain,
         sameSite:"none",
-        path:"/auth"
+        path:"auth"
         
     })
     
