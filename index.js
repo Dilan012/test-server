@@ -10,7 +10,7 @@ const port = 3001
 const cookieParser = require("cookie-parser");
 
 app.use(cors({
-        origin: 'https://ganket.work.gd',
+        origin: 'https://test.ganket.work.gd',
         credentials:true
     }));
 
@@ -24,7 +24,8 @@ app.get("/", (req, res, next) => {
         secure:true, 
         httpOnly:true,
         domain: cleanedDomain,
-        sameSite:"none"
+        sameSite:"none",
+        path:"/auth"
         
     })
     
