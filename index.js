@@ -10,8 +10,8 @@ const port = 3001
 const cookieParser = require("cookie-parser");
 
 app.use(cors({
-        origin: 'https://ganket.work.gds',
-        //credentials:true
+        origin: 'https://ganket.work.gd',
+        credentials:true
     }));
 
 app.use(cookieParser());
