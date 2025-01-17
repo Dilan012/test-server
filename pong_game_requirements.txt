@@ -1,0 +1,7 @@
+1. real time movements and the and score update (web socket)
+
+2. real time chat (web socket) (for each match, a new chat is opened and only for that match)
+
+3. match history with filter and high score and rankings
+
+4. on worst case of connect issue abondend the match
