@@ -48,6 +48,16 @@ const io = socketIo(server, {
     
     // Broadcast the new game state to all players
     io.emit('gameState', gameState);
+
+      // Measure latency (ping-pong mechanism)
+ 
+    // Measure custom ping
+    socket.on('ping', (startTime) => {
+        const latency = Date.now() - startTime;
+        console.log(`Custom Ping for ${socket.id}: ${latency}ms`);
+        socket.emit('pong', latency); // Send latency back to the client
+    });
+
 });
 
 // Handle disconnect
