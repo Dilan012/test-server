@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # Self-hosted runner
+    runs-on: [self-hosted, test-ec2]  # Self-hosted runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
