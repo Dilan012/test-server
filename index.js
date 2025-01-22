@@ -21,7 +21,6 @@ const io = socketIo(server, {
         credentials: true,
     }));
     
-    
     // Game state
     let gameState = {
         ball: { x: 100, y: 100, dx: 2, dy: 2 },
