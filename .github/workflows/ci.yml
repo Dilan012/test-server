@@ -9,14 +9,16 @@ jobs:
   deploy:
     runs-on: [self-hosted, test-ec2]  # Self-hosted runner
     steps:
+      - name: project directory
+        run: ls
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           repository: ${{ github.repository }}
           path: test-server/_work/test-repo
-
+        
       - name: Navigate to project directory
-        run: cd test-server/test-server/_work/test-repo
+        run: cd test-server/_work/test-repo
 
       - name: Print full directory path
         run: pwd  # This prints the full directory path
