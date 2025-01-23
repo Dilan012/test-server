@@ -16,7 +16,7 @@ jobs:
           path: test-server/_work/test-repo # Optional: Specify a target directory
 
       - name: Navigate to project directory
-        run: cd _work/test-repo # Replace with your project's directory
+        run: cd test-server/_work/test-repo # Replace with your project's directory
 
       - name: List files in the project directory
         run: ls
