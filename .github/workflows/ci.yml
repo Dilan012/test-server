@@ -19,7 +19,7 @@ jobs:
         run: cd _work/test-repo # Replace with your project's directory
 
       - name: List files in the project directory
-        run: ls -la _work/test-server
+        run: ls
 
       - name: Install dependencies
         run: npm install
