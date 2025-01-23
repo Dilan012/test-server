@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ github.repository }}
-          path: test-server/_work/test-repo
+          path: new-repo
         
       - name: Navigate to project directory
         run: cd test-server/_work/test-repo
