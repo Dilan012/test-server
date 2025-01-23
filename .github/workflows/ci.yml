@@ -16,7 +16,7 @@ jobs:
           path: /test/test-server # Optional: Specify a target directory
 
       - name: Navigate to project directory
-        run: cd /test/test-server # Replace with your project's directory
+        run: cd _work/test-repo # Replace with your project's directory
 
       - name: Pull latest code
         run: git pull origin main
