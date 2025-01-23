@@ -3,7 +3,7 @@ name: Continuous Deployment with Self-Hosted Runner
 on:
   push:
     branches:
-      - main
+      - main  # Adjust the branch name if necessary
 
 jobs:
   deploy:
@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ github.repository }}
-          path: test-server/_work/test-repo # Optional: Specify a target directory
+          path: test-server/_work/test-repo
 
       - name: Navigate to project directory
-        run:cd test-server/test-server/_work/test-repo # Replace with your project's directory
+        run: cd test-server/test-server/_work/test-repo
 
       - name: Print full directory path
         run: pwd  # This prints the full directory path
