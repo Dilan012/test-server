@@ -16,10 +16,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
      
-        
-      - name: Navigate to project directory
-        run: cd new-repo
-
       - name: Print full directory path
         run: pwd  # This prints the full directory path
         
